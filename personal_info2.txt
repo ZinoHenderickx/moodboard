@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<?php
+include "header_moodboard.php";
+include_once 'dbmoodboard.php';
+?>
+
+
+<?php
+ require('dbmoodboard.php');
+$result = mysqli_query($conn,"SELECT * FROM leerling ");
+while($row = mysqli_fetch_array($result))
+{
+       echo "<br />Your <b><i>Profile</i></b> is as follows:<br />";
+        echo "<b>First name:</b> ". $row['FirstName'];
+        echo "<br /><b>Last name:</b> ".$row['LastName'];
+        echo "<br /><b>Email:</b> ".$row['Email'];
+        echo "<br /><b>Date created :</b> ".$row['Date_Creation'];
+}
+mysqli_close($conn);
+?>
+    </main>
+
+
+
+</html>
