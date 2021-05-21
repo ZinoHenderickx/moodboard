@@ -1,6 +1,6 @@
 <?php
-include "header_moodboard.php";
-include "dbmoodboard.php";
+include "website/header_moodboard.php";
+include "database/dbmoodboard.php";
 ?>
 <html>
 <style>

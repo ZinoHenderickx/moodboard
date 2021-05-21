@@ -1,6 +1,6 @@
 <?php
 session_start();
-include "header.css";
+include "moodboard/website/header.css";
 ?>
 <body>
 <head>
