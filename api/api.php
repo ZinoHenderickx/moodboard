@@ -7,7 +7,7 @@ ob_start();
 date_default_timezone_set("Europe/Brussels");
 include './cs/cheapscraperapi.php';
 include './pp/functions.php';
-include './api/mb/moodboardapi.php';
+include './mb/moodboardapi.php';
 
 $url = $_REQUEST['request'];
 $method = $_SERVER['REQUEST_METHOD'];
@@ -37,12 +37,13 @@ switch($project){
     case "moodboard":
         switch ($url_list[1]){
             case "user":
-              AllInfo();
+              AllStudents();
               break;
             
-              case "values"
-                Allvalues();
-                break;
+            case "values":
+              AllValues();
+              break;
+            }
 
     case "cheapscraper":
       switch ($url_list[1]){
