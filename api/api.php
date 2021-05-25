@@ -6,29 +6,29 @@ ob_start();
 
 date_default_timezone_set("Europe/Brussels");
 include './cs/cheapscraperapi.php';
-include './pp/functions.php';
+include './pp/functions.php'; //Include je api dat je eerder hebt gemaakt.
 include './mb/moodboardapi.php';
 
-$url = $_REQUEST['request'];
-$method = $_SERVER['REQUEST_METHOD'];
+$url = $_REQUEST['request']; //Vraagt een request van de gevraagde url.
+$method = $_SERVER['REQUEST_METHOD']; //Vraagt een request methode aan.
 
-$url_list = explode("/",$url);
-$project = $url_list[0];
+$url_list = explode("/",$url); //Splitst de url op in delen.
+$project = $url_list[0]; //Begin op positie 0 van de url.
 
 
-if ($method == "POST") {
-    $json = json_decode(file_get_contents('php://input'), true);
+if ($method == "POST") { //Maakt een post van de onderstaande lijn.
+    $json = json_decode(file_get_contents('php://input'), true); //Decodeer de JSON en krijg de gevraagde content te zien.
 }
  
 
-switch($project){
-    case "requestToken":
-      header('register.php');
-    case "pp":
+switch($project){ //Switch functie, vervangt de if functies. 
+    case "requestToken": //Request een token op de volgende php.
+      header('register.php'); //Request de token.
+    case "pp": //Project van persoon 1
        
-	switch($url_list[1]){
-	  case "ferry":
-        get_next_ferry($_POST['lat'],$_POST['long'],$_POST['time']);
+	switch($url_list[1]){ //Begint op de 2de lijn van de url. 0= lijn 1 en 1 is = lijn 2
+	  case "ferry": //benaming van de url om op de gevraagde pagina te komen.
+        get_next_ferry($_POST['lat'],$_POST['long'],$_POST['time']); //Krijg de gevraagde waarde te zien.
         break;
         }
         //echo "pp";
