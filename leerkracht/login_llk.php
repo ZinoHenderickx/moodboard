@@ -23,7 +23,7 @@ include "moodboard/login/login_stijl.css";
 			<br><br>
             <button type="submit" value="Submit" class="registerbtn">Login</button>
             <hr>
-            <p>Nog niet geregistreerd? <a href="moodboard/registratie/registration_llk.php">Maak hier een account</a></p>
+            <p>Nog niet geregistreerd? <a href="registration_llk.php">Maak hier een account</a></p>
 		</form> 
 <?php
 
@@ -47,7 +47,7 @@ if( isset($_POST['Email']) )
             $_SESSION["Email"]=$selectedRow["Email"];
             $_SESSION["UserID"]=$selectedRow["ID"];
             $_SESSION["FirstName"]=$selectedRow["FirstName"];
-            Header("location:moodboard/webiste/moodboard_home_llk.php");
+            Header("location: home_llk.php");
         }
     }
     else

@@ -1,6 +1,6 @@
 <?php
 session_start();
-include "moodboard/website/header.css";
+include "moodboard/stijlen/header.css";
 ?>
 <body>
 <head>
@@ -8,7 +8,7 @@ include "moodboard/website/header.css";
 <div class="header">
 <div class="headerLeft">
 <ul>
-  <li><a href="moodboard_home.php" class="active">Home</a></li>
+  <li><a href="home_llk.php" class="active">Home</a></li>
   </ul>
 </div>
 
@@ -18,7 +18,7 @@ include "moodboard/website/header.css";
   echo "<a href='login_llk.php' style='color:white'>Login</a>";
 } else {
    
-  echo "<li><a href='logged_out.php' style='color:white'>Uitloggen (".$_SESSION["Email"].")</a></li>";
+  echo "<li><a href='logged_out_llk.php' style='color:white'>Uitloggen (".$_SESSION["Email"].")</a></li>";
 }
 ?>
 

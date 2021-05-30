@@ -2,8 +2,8 @@
 ini_set('display_errors', 1); 
 ini_set('display_startup_errors', 1); 
 error_reporting(E_ALL);
-include "dbmoodboard.php";
-include "registratie_stijl.css";
+include "moodboard/database/dbmoodboard.php";
+include "moodboard/stijlen/registratie_stijl.css";
 ?>
 <html>
 <body>

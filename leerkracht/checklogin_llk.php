@@ -6,7 +6,7 @@ if($count==1)
 {
   $_SESSION['Email']=true;
   $_SESSION['Email']=$Email;
-  header("Location: moodboard/login/moodboard_home_llk.php");
+  header("Location: home_llk.php");
   exit();
 }
 else
