@@ -1,5 +1,5 @@
 <?php
-include "stijlen/header_leerkracht.php";
+include "header_lln.php";
 ?>
 
 <style>

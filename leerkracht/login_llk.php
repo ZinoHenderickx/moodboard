@@ -3,13 +3,13 @@ session_start();
 ini_set('display_errors', 1); 
 ini_set('display_startup_errors', 1); 
 error_reporting(E_ALL);
-include "moodboard/database/dbmoodboard.php";
-include "moodboard/login/login_stijl.css";
+include "../database/dbmoodboard.php";
+include "../stijlen/login_stijl.css";
 ?>
 
 <html>
 <body>
-<form action="moodboard/login/login_llk.php" method="post">
+<form action="login_llk.php" method="post">
     <div class="container">
         <h1>Login Leerkracht</h1>
         <p>Vul alles in als je al een account hebt.</p>

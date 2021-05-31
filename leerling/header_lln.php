@@ -1,6 +1,6 @@
 <?php
 session_start();
-include "stijlen/header.css";
+include "../stijlen/header.css";
 ?>
 <body>
 <head>
@@ -8,9 +8,9 @@ include "stijlen/header.css";
 <div class="header">
 <div class="headerLeft">
 <ul>
-  <li><a href="moodboard_home.php" class="active">Home</a></li>
+  <li><a href="home_lln.php" class="active">Home</a></li>
   <li><a href="personal_info_lln.php" class="active">Personal Info</a></li>
-  <li><a href="values.php" class="active">Stats</a></li>
+  <li><a href="values_lln.php" class="active">Stats</a></li>
   </ul>
 </div>
 

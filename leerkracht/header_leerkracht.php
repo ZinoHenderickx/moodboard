@@ -1,6 +1,6 @@
 <?php
 session_start();
-include "moodboard/stijlen/header.css";
+include "../stijlen/header.css";
 ?>
 <body>
 <head>

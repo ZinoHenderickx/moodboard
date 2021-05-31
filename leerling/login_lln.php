@@ -3,8 +3,8 @@ session_start();
 ini_set('display_errors', 1); 
 ini_set('display_startup_errors', 1); 
 error_reporting(E_ALL);
-include "dbmoodboard.php";
-include "stijlen/login_stijl.css";
+include "../database/dbmoodboard.php";
+include "../stijlen/login_stijl.css";
 ?>
 
 <html>
@@ -48,7 +48,7 @@ if( isset($_POST['Email']) )
             $_SESSION["Email"]=$selectedRow["Email"];
             $_SESSION["UserID"]=$selectedRow["ID"];
             $_SESSION["FirstName"]=$selectedRow["FirstName"];
-            Header("location:moodboard_home.php");
+            Header("location:home_lln.php");
         }
     }
     else
