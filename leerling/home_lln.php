@@ -1,5 +1,5 @@
 <?php
-include "moodboard/website/header_leerkracht.php";
+include "stijlen/header_leerkracht.php";
 ?>
 
 <style>

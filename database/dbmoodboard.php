@@ -1,7 +1,7 @@
 <?php
 	$servername = "localhost";
-	$username = "zino";
-	$password = "zino12345";
+	$username = "frederick";
+	$password = "PPPPPP";
 	$dbname = "moodboard";
 
 
