@@ -21,15 +21,6 @@ if(empty($_SESSION['isAdmin']))
   </ul>
 </div>
 
-<div class="headerRight">
-  <ul>
-  <?php if ((!isset($_SESSION["UserID"]))||($_SESSION["isAdmin"]=="")) {
-  echo "<a href='admin_login.php' style='color:white'>Login</a>";
-} else {
-   
-  echo "<li><a href='admin_logout.php' style='color:white'>Uitloggen (".$_SESSION["name"].")</a></li>";
-}
-?>
 
 </ul>
 </div>

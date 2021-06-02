@@ -7,7 +7,7 @@ include "../database/dbmoodboard.php";
 ?>
 <html>
 <head>
-  <link rel="stylesheet" href="../stijlen/values.css">
+  <link rel="stylesheet" href="../styles/values.css">
 </head>
 <body>
 

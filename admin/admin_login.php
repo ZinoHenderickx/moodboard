@@ -4,7 +4,7 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1); 
 error_reporting(E_ALL);
 include "../database/dbusers.php";
-include "../styles/login_style.css";
+include "../styles/login.css";
 ?>
 
 <html>
@@ -47,7 +47,7 @@ if( isset($_POST['email']) )
     //User has access to the project
     if($access){
         $_SESSION['ID'] = $UserID;
-        $_SESSION['name'] = $name;
+        $_SESSION['Firstname'] = $Firstname;
         $_SESSION['isAdmin'] = $admin;
     echo "Logged in ! ";
     Header("location: admin_home.php");

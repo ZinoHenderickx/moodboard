@@ -7,7 +7,7 @@ error_reporting(E_ALL);
 ?>
 <html>
 <head>
-  <link rel="stylesheet" href="../stijlen/values.css">
+  <link rel="stylesheet" href="../styles/values.css">
 </head>
 <body>
 <table style="float: left;">
