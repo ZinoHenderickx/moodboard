@@ -1,8 +1,15 @@
 <?php
 session_start();
-include "../stijlen/header.css";
+include "../styles/header.css";
 ?>
 <body>
+<?php
+require("../database/dbusers.php");
+if(empty($_SESSION['isAdmin']))
+{
+    header("Location: admin_login.php");
+    die("Redirecting to admin_login.php");
+}?>
 <head>
 
 <div class="header">
@@ -17,10 +24,10 @@ include "../stijlen/header.css";
 <div class="headerRight">
   <ul>
   <?php if ((!isset($_SESSION["UserID"]))||($_SESSION["isAdmin"]=="")) {
-  echo "<a href='login_llk.php' style='color:white'>Login</a>";
+  echo "<a href='admin_login.php' style='color:white'>Login</a>";
 } else {
    
-  echo "<li><a href='logged_out_llk.php' style='color:white'>Uitloggen (".$_SESSION["name"].")</a></li>";
+  echo "<li><a href='admin_logout.php' style='color:white'>Uitloggen (".$_SESSION["name"].")</a></li>";
 }
 ?>
 

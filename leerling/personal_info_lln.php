@@ -1,5 +1,5 @@
 <?php
-include "header_lln.php";
+include "header.php";
 include '../database/dbmoodboard.php';
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
@@ -8,7 +8,7 @@ error_reporting(E_ALL);
 
 
 <?php
-$sql = "SELECT * FROM leerling  WHERE  ID = '".$_SESSION["UserID"]."'";
+$sql = "SELECT DISTINCT * FROM leerling  WHERE  ID = '".$_SESSION["UserID"]."'";
 $result = mysqli_query($conn,$sql);
 
 while($row = mysqli_fetch_array($result))

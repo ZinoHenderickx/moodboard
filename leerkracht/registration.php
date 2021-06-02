@@ -2,8 +2,8 @@
 ini_set('display_errors', 1); 
 ini_set('display_startup_errors', 1); 
 error_reporting(E_ALL);
-include "moodboard/database/dbmoodboard.php";
-include "moodboard/stijlen/registratie_stijl.css";
+include "../database/dbmoodboard.php";
+include "../styles/registration.css";
 ?>
 <html>
 <body>
@@ -25,7 +25,7 @@ if( isset($_POST['Email']) )
     if ($result === TRUE) {
         
         echo "OK, je bent geregistreerd."; 
-        Header("location:login_llk.php");
+        Header("location:login.php");
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
@@ -34,7 +34,7 @@ if( isset($_POST['Email']) )
 }
 ?>
 
-<form action="registration_llk.php" method="post">
+<form action="registration.php" method="post">
   <div class="containerreg">
     <h1>Registratie Leerkracht</h1>
     <p>Gelieve alles in te vullen om een account te creëren.</p>
@@ -86,7 +86,7 @@ if( isset($_POST['Email']) )
     <input type="password" placeholder="Enter Password" name="Password" value="">
 
     <hr>
-    <p>Door je te registreren accepteer je de privacyvoorwaarden <a href="#">Terms & Privacy</a>.</p>
+    <p>Door je te registreren accepteer je de privacyvoorwaarden <a href="../website/terms_privacy.html">Terms & Privacy</a>.</p>
 
     <button type="submit" value="Submit" class="registerbtn">Register</button>
   </div>

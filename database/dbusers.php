@@ -2,8 +2,8 @@
     function getConnectionUserDB(){
 
         $servername = "localhost";
-        $username = "frederick";
-        $password = "PPPPPP";
+        $username = "zino";
+        $password = "zino";
         $dbname = "registratie";
 
         // Create connection

@@ -4,5 +4,5 @@
    unset($_SESSION["Password"]);
    
    echo 'You have cleaned session';
-   header('Refresh: 2; URL = login_llk.php');
+   header('Refresh: 2; URL = login.php');
 ?>

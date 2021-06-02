@@ -1,12 +1,9 @@
 <?php
-ini_set('display_errors', 1); 
-ini_set('display_startup_errors', 1); 
-error_reporting(E_ALL);
-include "header_moodboard.php";
-include "dbmoodboard.php";
+include "header.php";
+include "../database/dbmoodboard.php";
 ?>
 <?php
-$sql = "SELECT DISTINCT FirstName FROM `leerling` WHERE FirstName = "Zino" ";
+$sql = "SELECT DISTINCT FirstName FROM `leerling` WHERE Leerjaar = '1A' ";
 $result = $conn-> query($sql);
 
 $FirstName = array();
@@ -17,21 +14,21 @@ while($row = $result-> fetch_assoc()){
 ?>
 <html>
 <head>
-  <link rel="stylesheet" href="values.css">
+  <link rel="stylesheet" href="../styles/values.css">
 </head>
 <body>
-<form action="values_lln.php" method="get">
+<form action="values.php" method="get">
 
-Select Gateway:
+Selecteer leerling:
 <select name="FirstName">
-    <option>Select Gateway</option>
+    <option>Selecteer leerling</option>
     <?php
                     foreach ($FirstName as $class) {
                         echo "<option value='$class'>" . $class . " </option>";
                     }
                 ?>
 </select>
-<td><input type="submit" name="Submit" value="Show" tabindex="10" /></td>
+
 
 
 
@@ -49,41 +46,38 @@ Select Gateway:
 
  
 <p>Date: <input type="text" id="datepicker" name="date"></p>
+<td><input type="submit" name="Submit" value="Show" tabindex="10" /></td>
 </form>
 
 
 <?php
   if(isset($_GET["FirstName"], $_GET["date"])) {
-    $SelectedFirstName = $_GET["Firstname"];
+    $SelectedFirstName = $_GET["FirstName"];
     $SelectedDate = $_GET["date"];
 }
 ?>
 
 <table>
     <tr>
-        <th>ID</th>
         <th>Emotie</th>
-        <th>Value</th>
+        <th>Waarde</th>
     </tr>
     <?php
     // $connection = $conn->query($sql);
-    $sql = "SELECT `FirstName` FROM `leerling` WHERE FirstName = "Zino"" ; 
-    $sql2 = "SELECT `emotie`, `value`, DATE(`CreateTime`)  FROM `value` WHERE `ID` = '".$SelectedGateway."' AND DATE_FORMAT(DATE(`CreateTime`),'%m/%d/%Y')  = '".$SelectedDate."'" ; 
+    $sql = "SELECT `emotie`, `CreateTime`, DATE(`CreateTime`)  FROM `value` WHERE `UserID` = 1 AND DATE_FORMAT(DATE(`CreateTime`),'%m/%d/%Y')  = '".$SelectedDate."'" ; 
     $result = $conn-> query($sql);
-    $result = $conn-> query($sql2);
 
 
     if ($result-> num_rows > 0) {
       while ($row = $result-> fetch_assoc()) {
-          echo "<tr><td>". $row["FirstName"]
-              ."</td><td>" . $row["emotie"]
-              ."</td><td>" . $row["value"]
+          echo "<tr><td>".$row["emotie"]
+              ."</td><td>" . $row["CreateTime"]
               ."</td></tr>";
       }
       echo "</table>";
   }
   else {
-      echo "0 results";
+      echo "Geen resultaten";
   }
   $conn-> close();
   ?>
