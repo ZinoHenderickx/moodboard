@@ -1,7 +1,4 @@
 <?php
-ini_set('display_errors', 1); 
-ini_set('display_startup_errors', 1); 
-error_reporting(E_ALL);
 include "header.php";
 include "../database/dbmoodboard.php";
 ?>
@@ -70,7 +67,7 @@ while($row = $result-> fetch_assoc()){
       echo "</table>";
   }
   else {
-      echo "0 results";
+      echo "Geen resultaten";
   }
   $conn-> close();
   ?>
