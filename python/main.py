@@ -14,12 +14,6 @@ print("WiFi connected succesfully")
 print(wlan.ifconfig())
 
 
-# btn = Pin('P1', Pin.IN, Pin.PULL_UP)
-# btn2 = Pin('P5', Pin.IN, Pin.PULL_UP)
-# btn3 = Pin('P8', Pin.IN, Pin.PULL_UP)
-# btn4 = Pin('P11', Pin.IN, Pin.PULL_UP)
-
-
 btn = Pin('P4', Pin.IN, Pin.PULL_UP)
 btn2 = Pin('P7', Pin.IN, Pin.PULL_UP)
 btn3 = Pin('P9', Pin.IN, Pin.PULL_UP)
