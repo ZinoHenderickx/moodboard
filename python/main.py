@@ -6,11 +6,8 @@ from network import WLAN
 import machine
 
 wlan = WLAN(mode=WLAN.STA)
-# wlan.connect(ssid='SuivoAP', auth=(WLAN.WPA2, 'fortus450mc'))
-# wlan.connect(ssid='IoT', auth=(WLAN.WPA2, 'KdGIoT22!'))
-# wlan.connect(ssid='telenet-D4E0E', auth=(WLAN.WPA2, 'U77jGT6KEb4b'))
 time.sleep(2)
-wlan.connect(ssid='telenet-D4E0E', auth=(WLAN.WPA2, 'U77jGT6KEb4b'))
+wlan.connect(ssid='XXX', auth=(WLAN.WPA2, 'XXX'))
 while not wlan.isconnected():
     machine.idle()
 print("WiFi connected succesfully")
