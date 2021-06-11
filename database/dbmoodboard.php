@@ -1,8 +1,8 @@
 <?php
 	$servername = "localhost";
-	$username = "zino";
-	$password = "zino";
-	$dbname = "moodboard";
+	$username = "XXX";
+	$password = "XXX";
+	$dbname = "XXX";
 
 
 	// Create connection
