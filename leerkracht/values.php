@@ -60,7 +60,7 @@ Selecteer leerling:
 <table>
     <tr>
         <th>Emotie</th>
-        <th>Waarde</th>
+        <th>Tijd</th>
     </tr>
     <?php
     // $connection = $conn->query($sql);

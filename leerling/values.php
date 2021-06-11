@@ -49,7 +49,7 @@ while($row = $result-> fetch_assoc()){
 <table>
     <tr>
         <th>Emotie</th>
-        <th>Waarde</th>
+        <th>Tijd</th>
     </tr>
     <?php
     // $connection = $conn->query($sql);

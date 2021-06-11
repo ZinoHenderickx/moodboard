@@ -25,7 +25,6 @@ if ($result-> num_rows > 0) {
             ."</td><td>" . $row["LastName"]
             ."</td><td>" . $row["Leerjaar"]
             ."</td><td>" . $row["Email"]
-            ."</td><td>" . $row["CreateTime"]
             ."</td></tr>";
     }
     echo "</table>";
