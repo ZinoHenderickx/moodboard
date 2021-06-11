@@ -2,9 +2,9 @@
     function getConnectionUserDB(){
 
         $servername = "localhost";
-        $username = "zino";
-        $password = "zino";
-        $dbname = "registratie";
+        $username = "XXX";
+        $password = "XXX";
+        $dbname = "XXX";
 
         // Create connection
         $conn = new mysqli($servername, $username, $password, $dbname);
